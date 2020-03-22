@@ -62,7 +62,7 @@ class VsoAzureAuthority extends AzureAuthority implements IVsoAuthority
         try
         {
             // TODO: 449524: create a `HttpClient` with a minimum number of redirects, default creds, and a reasonable timeout (access token generation seems to hang occasionally)
-            final HttpClient client = new HttpClient(Global.getUserAgent());
+            final HttpClient client = new HttpClient(Global.getUserAgentRenamed());
             Trace.writeLine("   using token to acquire personal access token");
             accessToken.contributeHeader(client.Headers);
 
@@ -307,7 +307,7 @@ class VsoAzureAuthority extends AzureAuthority implements IVsoAuthority
         Debug.Assert(targetUri != null && targetUri.isAbsolute(), "The targetUri parameter is null or invalid");
         Debug.Assert(credentials != null, "The credentials parameter is null or invalid");
 
-        final HttpClient client = new HttpClient(Global.getUserAgent());
+        final HttpClient client = new HttpClient(Global.getUserAgentRenamed());
 
         // create an request to the VSO deployment data end-point
         final URI requestUri = createConnectionDataUri(targetUri);
@@ -331,7 +331,7 @@ class VsoAzureAuthority extends AzureAuthority implements IVsoAuthority
 
         Trace.writeLine("VsoAzureAuthority::createConnectionDataRequest");
 
-        final HttpClient client = new HttpClient(Global.getUserAgent());
+        final HttpClient client = new HttpClient(Global.getUserAgentRenamed());
 
         // create an request to the VSO deployment data end-point
         final URI requestUri = createConnectionDataUri(targetUri);

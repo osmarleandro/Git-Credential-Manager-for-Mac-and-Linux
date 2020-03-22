@@ -11,7 +11,7 @@ public class GlobalTest
     @Test
     public void getUserAgent_correctFormat() throws Exception
     {
-        final String actual = Global.getUserAgent();
+        final String actual = Global.getUserAgentRenamed();
 
         Assert.assertNotNull(actual);
         Assert.assertTrue(actual.matches("git-credential-manager \\([^;]+; [^;]+; [^;]+\\) [^/]+/.+ git-tools/.+"));

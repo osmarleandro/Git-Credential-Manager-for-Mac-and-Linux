@@ -118,7 +118,7 @@ class AzureAuthority implements IAzureAuthority
             return tokens;
         }
 
-        final HttpClient client = new HttpClient(Global.getUserAgent());
+        final HttpClient client = new HttpClient(Global.getUserAgentRenamed());
         try
         {
             final URI tokenEndpoint = createTokenEndpointUri(authorityHostUrl);

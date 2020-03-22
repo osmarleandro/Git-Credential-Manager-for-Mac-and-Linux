@@ -19,7 +19,7 @@ final class Global
      * Example from Java version:
      * git-credential-manager (Windows 8.1; 6.3; amd64) Java HotSpot(TM) 64-Bit Server VM/1.8.0_51-b16 git-tools/1.0.0-SNAPSHOT
      */
-    public static String getUserAgent()
+    public static String getUserAgentRenamed()
     {
         if (userAgent == null)
         {

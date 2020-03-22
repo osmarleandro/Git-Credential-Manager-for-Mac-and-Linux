@@ -30,7 +30,7 @@ public class DeviceFlowImpl implements DeviceFlow
         contributeAuthorizationRequestParameters(bodyParameters);
         final StringContent requestBody = StringContent.createUrlEncoded(bodyParameters);
 
-        final HttpClient client = new HttpClient(Global.getUserAgent());
+        final HttpClient client = new HttpClient(Global.getUserAgentRenamed());
         final String responseText;
         try {
             final HttpURLConnection response = client.post(deviceEndpoint, requestBody);
@@ -83,7 +83,7 @@ public class DeviceFlowImpl implements DeviceFlow
 
         final int intervalSeconds = deviceFlowResponse.getInterval();
         int intervalMilliseconds = intervalSeconds * 1000;
-        final HttpClient client = new HttpClient(Global.getUserAgent());
+        final HttpClient client = new HttpClient(Global.getUserAgentRenamed());
         String responseText = null;
         final Calendar expiresAt = deviceFlowResponse.getExpiresAt();
         while (Calendar.getInstance().compareTo(expiresAt) <= 0) {
