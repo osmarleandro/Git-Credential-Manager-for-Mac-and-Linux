@@ -271,7 +271,7 @@ public abstract class BaseVsoAuthentication extends BaseAuthentication
             String tenant = null;
 
             HttpURLConnection connection = null;
-            final HttpClient client = new HttpClient(Global.getUserAgent());
+            final HttpClient client = new HttpClient(Global.getUserAgentRenamed());
             try
             {
                 connection = client.head(targetUri, new Action<HttpURLConnection>()
