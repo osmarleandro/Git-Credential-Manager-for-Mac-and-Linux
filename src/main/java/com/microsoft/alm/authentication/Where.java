@@ -103,7 +103,12 @@ public class Where extends ExtractedSuperclass
 
         path.set(null);
 
-        extracted(path, GlobalConfigFileName);
+        String globalPath = Path.combine(Environment.getFolderPath(Environment.SpecialFolder.UserProfile), GlobalConfigFileName);
+		
+		if (Path.fileExists(globalPath))
+		{
+		    path.set(globalPath);
+		}
 
         return path.get() != null;
     }
