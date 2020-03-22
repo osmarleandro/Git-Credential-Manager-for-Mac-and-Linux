@@ -53,6 +53,11 @@ public class DeviceFlowImpl implements DeviceFlow
         return result;
     }
 
+    public String getResource()
+    {
+        return resource;
+    }
+
     /**
      * Allows subclasses to augment the request to the device endpoint with additional parameters.
      *

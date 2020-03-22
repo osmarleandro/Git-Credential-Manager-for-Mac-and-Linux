@@ -11,11 +11,6 @@ public class AzureDeviceFlow extends DeviceFlowImpl
 {
     private URI redirectUri;
 
-    public String getResource()
-    {
-        return resource;
-    }
-
     public void setResource(final String resource)
     {
         this.resource = resource;
@@ -34,9 +29,9 @@ public class AzureDeviceFlow extends DeviceFlowImpl
     @Override
     protected void contributeAuthorizationRequestParameters(final QueryString bodyParameters)
     {
-        if (resource != null)
+        if (getResource() != null)
         {
-            bodyParameters.put("resource", resource);
+            bodyParameters.put("resource", getResource());
         }
 
         if (redirectUri != null)
