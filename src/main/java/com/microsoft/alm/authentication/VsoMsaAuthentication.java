@@ -4,7 +4,7 @@
 package com.microsoft.alm.authentication;
 
 import com.microsoft.alm.helpers.Action;
-import com.microsoft.alm.helpers.Trace;
+import com.microsoft.alm.gitcredentialmanager.Trace;
 import com.microsoft.alm.secret.Credential;
 import com.microsoft.alm.secret.TokenPair;
 import com.microsoft.alm.secret.VsoTokenScope;

@@ -30,7 +30,7 @@
 
 package org.slf4j.impl;
 
-import com.microsoft.alm.helpers.Trace;
+import com.microsoft.alm.gitcredentialmanager.Trace;
 import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MarkerIgnoringBase;
 import org.slf4j.helpers.MessageFormatter;

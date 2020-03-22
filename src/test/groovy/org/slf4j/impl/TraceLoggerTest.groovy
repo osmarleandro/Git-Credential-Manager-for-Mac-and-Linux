@@ -3,7 +3,7 @@
 
 package org.slf4j.impl
 
-import com.microsoft.alm.helpers.Trace
+import com.microsoft.alm.gitcredentialmanager.Trace
 import groovy.transform.CompileStatic
 import org.junit.After
 import org.junit.Before

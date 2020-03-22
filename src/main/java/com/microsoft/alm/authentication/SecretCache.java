@@ -6,7 +6,7 @@ package com.microsoft.alm.authentication;
 import com.microsoft.alm.helpers.Debug;
 import com.microsoft.alm.helpers.ObjectExtensions;
 import com.microsoft.alm.helpers.StringHelper;
-import com.microsoft.alm.helpers.Trace;
+import com.microsoft.alm.gitcredentialmanager.Trace;
 import com.microsoft.alm.secret.Credential;
 import com.microsoft.alm.secret.Secret;
 import com.microsoft.alm.secret.Token;

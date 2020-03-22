@@ -11,7 +11,7 @@ import com.microsoft.alm.helpers.HttpClient;
 import com.microsoft.alm.helpers.NotImplementedException;
 import com.microsoft.alm.helpers.StringContent;
 import com.microsoft.alm.helpers.StringHelper;
-import com.microsoft.alm.helpers.Trace;
+import com.microsoft.alm.gitcredentialmanager.Trace;
 import com.microsoft.alm.secret.Credential;
 import com.microsoft.alm.secret.Token;
 import com.microsoft.alm.secret.TokenType;

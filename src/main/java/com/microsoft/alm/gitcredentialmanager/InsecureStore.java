@@ -5,7 +5,6 @@ package com.microsoft.alm.gitcredentialmanager;
 
 import com.microsoft.alm.authentication.ISecureStore;
 import com.microsoft.alm.helpers.IOHelper;
-import com.microsoft.alm.helpers.Trace;
 import com.microsoft.alm.helpers.XmlHelper;
 import com.microsoft.alm.secret.Credential;
 import com.microsoft.alm.secret.Token;
@@ -25,7 +24,6 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
