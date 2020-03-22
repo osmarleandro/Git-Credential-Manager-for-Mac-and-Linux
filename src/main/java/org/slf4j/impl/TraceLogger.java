@@ -30,11 +30,12 @@
 
 package org.slf4j.impl;
 
-import com.microsoft.alm.helpers.Trace;
 import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MarkerIgnoringBase;
 import org.slf4j.helpers.MessageFormatter;
 import org.slf4j.spi.LocationAwareLogger;
+
+import com.microsoft.alm.gitcredentialmanager.Trace;
 
 public class TraceLogger extends MarkerIgnoringBase
 {

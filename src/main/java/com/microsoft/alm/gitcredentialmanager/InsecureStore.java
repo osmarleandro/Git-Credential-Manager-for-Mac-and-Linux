@@ -5,7 +5,6 @@ package com.microsoft.alm.gitcredentialmanager;
 
 import com.microsoft.alm.authentication.ISecureStore;
 import com.microsoft.alm.helpers.IOHelper;
-import com.microsoft.alm.helpers.Trace;
 import com.microsoft.alm.helpers.XmlHelper;
 import com.microsoft.alm.secret.Credential;
 import com.microsoft.alm.secret.Token;

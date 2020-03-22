@@ -3,6 +3,7 @@
 
 package com.microsoft.alm.authentication;
 
+import com.microsoft.alm.gitcredentialmanager.Trace;
 import com.microsoft.alm.helpers.Action;
 import com.microsoft.alm.helpers.Debug;
 import com.microsoft.alm.helpers.Guid;
@@ -12,7 +13,6 @@ import com.microsoft.alm.helpers.ObjectExtensions;
 import com.microsoft.alm.helpers.QueryString;
 import com.microsoft.alm.helpers.StringContent;
 import com.microsoft.alm.helpers.StringHelper;
-import com.microsoft.alm.helpers.Trace;
 import com.microsoft.alm.helpers.UriHelper;
 import com.microsoft.alm.oauth2.useragent.AuthorizationException;
 import com.microsoft.alm.oauth2.useragent.AuthorizationResponse;

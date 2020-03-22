@@ -26,7 +26,6 @@ import com.microsoft.alm.helpers.IOHelper;
 import com.microsoft.alm.helpers.NotImplementedException;
 import com.microsoft.alm.helpers.Path;
 import com.microsoft.alm.helpers.StringHelper;
-import com.microsoft.alm.helpers.Trace;
 import com.microsoft.alm.helpers.UriHelper;
 import com.microsoft.alm.oauth2.useragent.Provider;
 import com.microsoft.alm.oauth2.useragent.Version;

@@ -3,11 +3,11 @@
 
 package com.microsoft.alm.authentication;
 
+import com.microsoft.alm.gitcredentialmanager.Trace;
 import com.microsoft.alm.helpers.Debug;
 import com.microsoft.alm.helpers.Environment;
 import com.microsoft.alm.helpers.Path;
 import com.microsoft.alm.helpers.StringHelper;
-import com.microsoft.alm.helpers.Trace;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
