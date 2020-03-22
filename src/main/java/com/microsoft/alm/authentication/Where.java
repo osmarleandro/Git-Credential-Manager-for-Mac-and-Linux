@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Where
+public class Where extends ExtractedSuperclass
 {
     private static final Pattern gitdirPattern = Pattern.compile("gitdir\\s*:\\s([^\\r\\n]+)", Pattern.CASE_INSENSITIVE);
 
