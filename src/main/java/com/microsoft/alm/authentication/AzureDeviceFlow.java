@@ -45,4 +45,9 @@ public class AzureDeviceFlow extends DeviceFlowImpl
     {
         return AzureDeviceFlowResponse.fromJson(responseText);
     }
+
+    public String getResource()
+    {
+        return resource;
+    }
 }
