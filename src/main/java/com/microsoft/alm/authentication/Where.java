@@ -99,7 +99,7 @@ public class Where extends ExtractedSuperclass
 	 */
 	public static boolean gitGlobalConfig(final AtomicReference<String> path)
 	{
-		return GithubTokenScope.gitGlobalConfig(path);
+		return GithubTokenScopeRenamed.gitGlobalConfig(path);
 	}
 
 	private static void extracted(final AtomicReference<String> path, final String GlobalConfigFileName) {
