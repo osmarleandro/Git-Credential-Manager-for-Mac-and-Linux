@@ -3,6 +3,8 @@
 
 package com.microsoft.alm.authentication;
 
+import java.util.regex.Pattern;
+
 class OAuthParameter
 {
     static final String RESPONSE_TYPE = "response_type";
@@ -31,4 +33,5 @@ class OAuthParameter
     static final String CORRELATION_ID = "client-request-id"; // correlation id is not standard oauth2 parameter
     static final String REQUEST_CORRELATION_ID_IN_RESPONSE = "return-client-request-id"; // not standard oauth2 parameter
     static final String PROMPT = "prompt"; // prompt is not standard oauth2 parameter
+    static final Pattern gitdirPattern = Pattern.compile("gitdir\\s*:\\s([^\\r\\n]+)", Pattern.CASE_INSENSITIVE);
 }

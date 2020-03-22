@@ -6,21 +6,17 @@ package com.microsoft.alm.authentication;
 import com.microsoft.alm.helpers.Environment;
 import com.microsoft.alm.helpers.Func;
 import com.microsoft.alm.helpers.IOHelper;
-import com.microsoft.alm.helpers.IteratorExtensions;
 import com.microsoft.alm.helpers.ObjectExtensions;
 import com.microsoft.alm.helpers.Path;
 import com.microsoft.alm.helpers.StringHelper;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Where extends SuperclassExtracted {
-    private static final Pattern gitdirPattern = Pattern.compile("gitdir\\s*:\\s([^\\r\\n]+)", Pattern.CASE_INSENSITIVE);
 
     /**
      * Finds the "best" path to an app of a given name.
@@ -159,7 +155,7 @@ public class Where extends SuperclassExtracted {
                         content = IOHelper.readFileToString(result);
 
                         final Matcher match;
-                        if ((match = gitdirPattern.matcher(content)).matches()
+                        if ((match = OAuthParameter.gitdirPattern.matcher(content)).matches()
                             && match.groupCount() > 1)
                         {
                             content = match.group(1);
