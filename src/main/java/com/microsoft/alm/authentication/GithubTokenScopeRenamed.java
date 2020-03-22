@@ -11,8 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class GithubTokenScopeRenamed extends TokenScope
-{
+public class GithubTokenScopeRenamed extends TokenScope implements ExtractedInterface {
     public static final GithubTokenScopeRenamed None = new GithubTokenScopeRenamed(StringHelper.Empty);
     /**
      * Create gists
