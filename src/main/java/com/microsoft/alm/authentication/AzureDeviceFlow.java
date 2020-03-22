@@ -11,11 +11,6 @@ public class AzureDeviceFlow extends DeviceFlowImpl
 {
     private URI redirectUri;
 
-    public String getResource()
-    {
-        return resource;
-    }
-
     public void setResource(final String resource)
     {
         this.resource = resource;
