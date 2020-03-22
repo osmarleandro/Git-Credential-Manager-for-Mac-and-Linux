@@ -3,7 +3,10 @@
 
 package com.microsoft.alm.authentication;
 
+import com.microsoft.alm.helpers.Environment;
+import com.microsoft.alm.helpers.Environment.SpecialFolder;
 import com.microsoft.alm.helpers.NotImplementedException;
+import com.microsoft.alm.helpers.Path;
 import com.microsoft.alm.helpers.ScopeSet;
 import com.microsoft.alm.helpers.StringHelper;
 import com.microsoft.alm.secret.TokenScope;
@@ -11,6 +14,7 @@ import com.microsoft.alm.secret.TokenScope;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class GithubTokenScope extends TokenScope
 {
@@ -164,5 +168,27 @@ public class GithubTokenScope extends TokenScope
     {
         throw new NotImplementedException(449506);
     }
+
+	/**
+	 * Gets the path to the Git global configuration file.
+	 *
+	 * @param path Path to the Git global configuration.
+	 * @return True if succeeds; false otherwise.
+	 */
+	public static boolean gitGlobalConfig(final AtomicReference<String> path)
+	{
+	    final String GlobalConfigFileName = ".gitconfig";
+	
+	    path.set(null);
+	
+	    String globalPath = Path.combine(Environment.getFolderPath(Environment.SpecialFolder.UserProfile), GlobalConfigFileName);
+		
+		if (Path.fileExists(globalPath))
+		{
+		    path.set(globalPath);
+		}
+	
+	    return path.get() != null;
+	}
 
 }
