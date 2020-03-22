@@ -100,15 +100,19 @@ public class Where
 
         path.set(null);
 
-        String globalPath = Path.combine(Environment.getFolderPath(Environment.SpecialFolder.UserProfile), GlobalConfigFileName);
+        extracted(path, GlobalConfigFileName);
+
+        return path.get() != null;
+    }
+
+	private static void extracted(final AtomicReference<String> path, final String GlobalConfigFileName) {
+		String globalPath = Path.combine(Environment.getFolderPath(Environment.SpecialFolder.UserProfile), GlobalConfigFileName);
 
         if (Path.fileExists(globalPath))
         {
             path.set(globalPath);
         }
-
-        return path.get() != null;
-    }
+	}
 
     /**
      * Gets the path to the Git local configuration file based on the startingDirectory.
