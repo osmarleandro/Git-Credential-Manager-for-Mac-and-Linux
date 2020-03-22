@@ -149,7 +149,7 @@ public final class Configuration
         }
 
         // find and parse Git's global config
-        if (Where.gitGlobalConfig(globalConfig))
+        if (GithubTokenScope.gitGlobalConfig(globalConfig))
         {
             parseGitConfig(globalConfig.get());
         }

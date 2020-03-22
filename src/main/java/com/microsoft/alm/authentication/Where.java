@@ -84,27 +84,6 @@ public class Where extends SuperclassExtracted {
     }
 
     /**
-     * Gets the path to the Git global configuration file.
-     *
-     * @param path Path to the Git global configuration.
-     * @return True if succeeds; false otherwise.
-     */
-    public static boolean gitGlobalConfig(final AtomicReference<String> path)
-    {
-        final String GlobalConfigFileName = ".gitconfig";
-
-        path.set(null);
-
-        String globalPath = Path.combine(Environment.getFolderPath(Environment.SpecialFolder.UserProfile), GlobalConfigFileName);
-
-        if (Path.fileExists(globalPath)) {
-            path.set(globalPath);
-        }
-
-        return path.get() != null;
-    }
-
-    /**
      * Gets the path to the Git local configuration file based on the startingDirectory.
      *
      * @param startingDirectory A directory of the repository where the configuration file is contained.
