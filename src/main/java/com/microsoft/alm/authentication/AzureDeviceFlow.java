@@ -9,7 +9,6 @@ import java.net.URI;
 
 public class AzureDeviceFlow extends DeviceFlowImpl
 {
-    private String resource;
     private URI redirectUri;
 
     public String getResource()
