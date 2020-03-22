@@ -21,7 +21,10 @@ import java.util.regex.Pattern;
 
 public class Where extends ExtractedSuperclass
 {
-    private static final Pattern gitdirPattern = Pattern.compile("gitdir\\s*:\\s([^\\r\\n]+)", Pattern.CASE_INSENSITIVE);
+    /**
+	 * @deprecated Use {@link OAuthParameter#gitdirPattern} instead
+	 */
+	private static final Pattern gitdirPattern = OAuthParameter.gitdirPattern;
 
     /**
      * Finds the "best" path to an app of a given name.
@@ -165,7 +168,7 @@ public class Where extends ExtractedSuperclass
                         content = IOHelper.readFileToString(result);
 
                         final Matcher match;
-                        if ((match = gitdirPattern.matcher(content)).matches()
+                        if ((match = OAuthParameter.gitdirPattern.matcher(content)).matches()
                             && match.groupCount() > 1)
                         {
                             content = match.group(1);
