@@ -18,9 +18,7 @@ import java.util.Calendar;
 
 public class DeviceFlowImpl implements DeviceFlow
 {
-    protected String resource;
-
-	@Override
+    @Override
     public DeviceFlowResponse requestAuthorization(final URI deviceEndpoint, final String clientId, final String scope)
     {
         final QueryString bodyParameters = new QueryString();
