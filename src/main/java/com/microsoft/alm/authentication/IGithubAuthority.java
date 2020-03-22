@@ -14,7 +14,7 @@ interface IGithubAuthority
         final String username,
         final String password,
         final String authenticationCode,
-        final GithubTokenScopeRenamed scope);
+        final ExtractedInterface scope);
 
     boolean validateCredentials(final URI targetUri, final Credential credentials);
 }

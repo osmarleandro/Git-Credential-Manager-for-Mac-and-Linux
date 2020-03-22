@@ -16,9 +16,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class GithubTokenScopeRenamed extends TokenScope
+public class GithubTokenScopeRenamed extends TokenScope implements ExtractedInterface
 {
-    public static final GithubTokenScopeRenamed None = new GithubTokenScopeRenamed(StringHelper.Empty);
+    public static final ExtractedInterface None = new GithubTokenScopeRenamed(StringHelper.Empty);
     /**
      * Create gists
      */
@@ -144,27 +144,27 @@ public class GithubTokenScopeRenamed extends TokenScope
         return values.iterator();
     }
 
-    public static GithubTokenScopeRenamed operatorPlus(final GithubTokenScopeRenamed scope1, final GithubTokenScopeRenamed scope2)
+    public static ExtractedInterface operatorPlus(final ExtractedInterface scope1, final ExtractedInterface scope2)
     {
         throw new NotImplementedException(449506);
     }
 
-    public static GithubTokenScopeRenamed operatorMinus(final GithubTokenScopeRenamed scope1, final GithubTokenScopeRenamed scope2)
+    public static ExtractedInterface operatorMinus(final ExtractedInterface scope1, final ExtractedInterface scope2)
     {
         throw new NotImplementedException(449506);
     }
 
-    public static GithubTokenScopeRenamed operatorOr(final GithubTokenScopeRenamed scope1, final GithubTokenScopeRenamed scope2)
+    public static ExtractedInterface operatorOr(final ExtractedInterface scope1, final ExtractedInterface scope2)
     {
         throw new NotImplementedException(449506);
     }
 
-    public static GithubTokenScopeRenamed operatorAnd(final GithubTokenScopeRenamed scope1, final GithubTokenScopeRenamed scope2)
+    public static ExtractedInterface operatorAnd(final ExtractedInterface scope1, final ExtractedInterface scope2)
     {
         throw new NotImplementedException(449506);
     }
 
-    public static GithubTokenScopeRenamed operatorXor(final GithubTokenScopeRenamed scope1, final GithubTokenScopeRenamed scope2)
+    public static ExtractedInterface operatorXor(final ExtractedInterface scope1, final ExtractedInterface scope2)
     {
         throw new NotImplementedException(449506);
     }
