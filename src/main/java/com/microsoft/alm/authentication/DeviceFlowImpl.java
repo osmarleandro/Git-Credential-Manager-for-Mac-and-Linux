@@ -160,8 +160,4 @@ public class DeviceFlowImpl implements DeviceFlow
         final TokenPair tokenPair = new TokenPair(responseText);
         return tokenPair;
     }
-
-	public String getResource() {
-	    return resource;
-	}
 }
