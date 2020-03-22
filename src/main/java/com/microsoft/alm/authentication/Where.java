@@ -100,14 +100,17 @@ public class Where
 
         path.set(null);
 
-        String globalPath = Path.combine(Environment.getFolderPath(Environment.SpecialFolder.UserProfile), GlobalConfigFileName);
-
-        if (Path.fileExists(globalPath))
-        {
-            path.set(globalPath);
-        }
+        extracted(path, GlobalConfigFileName, Environment.getFolderPath(Environment.SpecialFolder.UserProfile));
 
         return path.get() != null;
+    }
+
+    private static void extracted(AtomicReference<String> path, String globalConfigFileName, String folderPath) {
+        String globalPath = Path.combine(folderPath, globalConfigFileName);
+
+        if (Path.fileExists(globalPath)) {
+            path.set(globalPath);
+        }
     }
 
     /**
@@ -146,11 +149,7 @@ public class Where
                 {
                     if (result.isDirectory())
                     {
-                        final String localPath = Path.combine(result.getAbsolutePath(), LocalConfigFileName);
-                        if (Path.fileExists(localPath))
-                        {
-                            path.set(localPath);
-                        }
+                        extracted(path, LocalConfigFileName, result.getAbsolutePath());
                     }
                     else
                     {
